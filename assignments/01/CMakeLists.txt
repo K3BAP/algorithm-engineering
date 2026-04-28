@@ -45,11 +45,14 @@ target_include_directories(LEDA INTERFACE
 # Erstelle dein ausführbares Programm
 add_executable(task1 task1.cpp)
 add_executable(task2 task2.cpp)
+add_executable(task3 task3.cpp)
 
 # Stelle LEDA-Header sicher sichtbar für das Ziel (für IntelliSense/clangd)
 target_include_directories(task1 PRIVATE "${LEDA_ROOT_DIR}/incl")
 target_include_directories(task2 PRIVATE "${LEDA_ROOT_DIR}/incl")
+target_include_directories(task3 PRIVATE "${LEDA_ROOT_DIR}/incl")
 
 # Binde LEDA ein
 target_link_libraries(task1 PRIVATE LEDA)
 target_link_libraries(task2 PRIVATE LEDA)
+target_link_libraries(task3 PRIVATE LEDA)
